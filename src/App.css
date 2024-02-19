@@ -7,4 +7,10 @@ body {
   h1 {
     text-align: center;
   }
+  footer {
+    text-align: center;
+  }
+  a {
+    color: rgb(179, 6, 179);
+  }
 }
