@@ -7,7 +7,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <header className="App-header">
-          <h1>WEATHER REACT</h1>
+          <h1>wEaThEr REACT</h1>
         </header>
         <Weather />
         <footer>
