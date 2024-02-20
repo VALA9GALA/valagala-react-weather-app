@@ -29,7 +29,10 @@ export default function Weather() {
           <li>Sun and Rainbows</li>
           <div className="row">
             <div className="col-6">
-              <img src={require("./sun-fun-rnbw-no-bkgrnd.png")} />
+              <img
+                src={require("./sun-fun-rnbw-no-bkgrnd.png")}
+                alt="Sun and Rainbows"
+              />
               <span className="main-temp">11℃</span>
             </div>
             <div className="col-6">
