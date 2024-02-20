@@ -1,4 +1,5 @@
 import React from "react";
+import Weather from "./Weather";
 import "./App.css";
 
 export default function App() {
@@ -8,6 +9,7 @@ export default function App() {
         <header className="App-header">
           <h1>WEATHER REACT</h1>
         </header>
+        <Weather />
         <footer>
           Coded by{" "}
           <a
