@@ -36,9 +36,22 @@ export default function Weather() {
           </div>
         </div>
         <ul className="details me-5">
-          <li>🌧️11%</li>
-          <li>💦11%</li>
-          <li>🌬️11km/h</li>
+          <li>
+            <span className="emoji" role="img" aria-label="Rain-cloud emoji">
+              🌧️
+            </span>
+            11%
+          </li>
+          <li>
+            <span className="emoji" role="img" aria-label="Water-drops emoji">
+              💦11%
+            </span>
+          </li>
+          <li>
+            <span className="emoji" role="img" aria-label="Wind-blow emoji">
+              🌬️11km/h
+            </span>
+          </li>
         </ul>
         <h5>
           <em>It's always sunny in...</em>
