@@ -20,6 +20,7 @@ body {
     margin-top: 5px;
     text-align: center;
     color: #435058ff;
+    font-size: 12px;
   }
   a {
     color: rgb(179, 6, 179);
@@ -33,7 +34,7 @@ body {
     width: 400px;
     border: 2px solid #848c8eff;
     border-radius: 10px;
-    box-shadow: 10px 10px 10px rgba(67, 80, 88, 0.5);
+    /*box-shadow: 10px 10px 10px rgba(67, 80, 88, 0.5);*/
   }
   form {
     width: 70%;
@@ -79,7 +80,7 @@ body {
   .btn-info {
     background-color: mediumslateblue;
     border: none;
-    color: #f1f2eeff;
+    color: #f6e8e5;
   }
   .btn-info:hover {
     background-color: rgb(161, 148, 240);
@@ -91,7 +92,7 @@ body {
     color: #848c8eff;
   }
   .btn-warning:hover {
-    background-color: rgb(229, 244, 160);
+    background-color: rgb(232, 251, 148);
   }
 
   h2 {
@@ -102,6 +103,10 @@ body {
     text-shadow: 2px 2px #435058ff;
     letter-spacing: 5px;
   }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
   li {
     text-align: center;
     list-style: none;
@@ -109,7 +114,6 @@ body {
     font-family: monospace;
   }
   .description {
-    margin-left: 0px;
     padding: 5px;
   }
   .main-temp-info {
@@ -117,22 +121,31 @@ body {
     justify-content: center;
   }
   img {
-    width: 160px;
-    margin-left: -30px;
-    margin-top: -20px;
+    width: 120px;
+    float: left;
   }
   .main-temp {
     font-size: 60px;
+    line-height: 2;
     margin-left: 40px;
-
     color: mediumslateblue;
     opacity: 0.8;
     text-shadow: 2px 2px #435058ff;
+    float: right;
+  }
+  .unit {
+    color: mediumslateblue;
+    opacity: 0.8;
+    text-shadow: 1px 1px #435058ff;
+    font-size: 24px;
+    line-height: 3;
+    margin-left: -5px;
   }
   .details {
     display: flex;
     justify-content: space-evenly;
     font-size: 16px;
+    margin-top: -10px;
   }
 
   hr {

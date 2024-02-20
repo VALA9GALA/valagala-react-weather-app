@@ -3,21 +3,21 @@ import React from "react";
 export default function Weather() {
   return (
     <div className="Weather">
-      <div className="container">
+      <div className="container shadow-lg">
         <form>
           <div className="row">
             <div className="col">
               <input
                 type="search"
                 placeholder="Enter a city..."
-                className="form-control"
+                className="form-control shadow-sm"
                 autoFocus
               />
             </div>
           </div>
           <div className="buttons">
-            <button className="btn btn-info me-3">Search</button>
-            <button className="btn btn-warning">Current</button>
+            <button className="btn btn-info me-3 shadow-sm">Search</button>
+            <button className="btn btn-warning shadow-sm">Current</button>
           </div>
         </form>
 
@@ -32,10 +32,11 @@ export default function Weather() {
               src={require("./sun-fun-rnbw-no-bkgrnd.png")}
               alt="Sun and Rainbows"
             />
-            <div className="main-temp">11℃</div>
+            <span className="main-temp">11</span>
+            <span className="unit">°C | °F</span>
           </div>
         </div>
-        <ul className="details me-5">
+        <ul className="details">
           <li>
             <span className="emoji" role="img" aria-label="Rain-cloud emoji">
               🌧️
