@@ -9,7 +9,7 @@ export default function App() {
         <header className="App-header">
           <h1>wEaThEr REACT</h1>
         </header>
-        <Weather />
+        <Weather defaultCity="New York" />
         <footer>
           Coded by{" "}
           <a

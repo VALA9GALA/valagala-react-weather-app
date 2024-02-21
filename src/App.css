@@ -113,8 +113,11 @@ body {
     color: #848c8eff;
     font-family: monospace;
   }
-  .description {
+  .description-info {
     padding: 5px;
+  }
+  .description {
+    text-transform: capitalize;
   }
   .main-temp-info {
     display: flex;
@@ -159,5 +162,14 @@ body {
     /*color: mediumslateblue;*/
     opacity: 0.8;
     margin-left: -20px;
+  }
+}
+.Hourglass {
+  .hourglass {
+    display: block;
+    margin: 80px auto;
+  }
+  h4 {
+    text-align: center;
   }
 }
