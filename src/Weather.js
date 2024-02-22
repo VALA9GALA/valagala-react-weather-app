@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Hourglass } from "react-loader-spinner";
-import FomattedDate from "./FormattedDate";
+import WeatherInfo from "./WeatherInfo";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
-
+  const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
       ready: true,
       city: response.data.name,
-      date: (new Date(response.data.dt * 1000)),
+      date: new Date(response.data.dt * 1000),
       temp: response.data.main.temp,
       description: response.data.weather[0].description,
       precipitation: response.data.precipitation,
@@ -26,18 +26,34 @@ export default function Weather(props) {
     });
   }
 
+  function search() {
+    const apiKey = "bd5b4461863eddaa6ced0a0a67989e0a";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
         <div className="container shadow-lg">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div className="row">
               <div className="col">
                 <input
                   type="search"
                   placeholder="Enter a city..."
                   className="form-control shadow-sm"
-                  autoFocus
+                  autoFocus="on"
+                  onChange={handleCityChange}
                 />
               </div>
             </div>
@@ -46,52 +62,12 @@ export default function Weather(props) {
               <button className="btn btn-warning shadow-sm">Current</button>
             </div>
           </form>
-
-          <h2>{weatherData.city}</h2>
-          <ul className="description-info">
-            <li>
-              <FomattedDate date={weatherData.date} />
-            </li>
-            <li className="description">{weatherData.description}</li>
-          </ul>
-          <div className="row">
-            <div className="col main-temp-info">
-              {weatherData.iconUrl}
-              <span className="main-temp">{Math.round(weatherData.temp)}</span>
-              <span className="unit">°F</span>
-            </div>
-          </div>
-          <ul className="details">
-            <li>
-              <span className="emoji" role="img" aria-label="Rain-cloud emoji">
-                🌧️
-              </span>
-              {weatherData.precipitation}mm
-            </li>
-            <li>
-              <span className="emoji" role="img" aria-label="Water-drops emoji">
-                💦{weatherData.humidity}%
-              </span>
-            </li>
-            <li>
-              <span className="emoji" role="img" aria-label="Wind-blow emoji">
-                🌬️{weatherData.wind} m/h
-              </span>
-            </li>
-          </ul>
-          <h5>
-            <em>It's always sunny in...</em>
-          </h5>
-          <hr />
+          <WeatherInfo data={weatherData} />
         </div>
       </div>
     );
   } else {
-    const apiKey = "3dce9b1c66837262a25b3f448d354a76";
-    let city = props.defaultCity;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-    axios.get(apiUrl).then(handleResponse);
-
+    search();
     return (
       <div className="Hourglass">
         <Hourglass
