@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Hourglass } from "react-loader-spinner";
+import FomattedDate from "./FormattedDate";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -10,7 +11,7 @@ export default function Weather(props) {
     setWeatherData({
       ready: true,
       city: response.data.name,
-      date: "Tuesday 6:26PM",
+      date: (new Date(response.data.dt * 1000)),
       temp: response.data.main.temp,
       description: response.data.weather[0].description,
       precipitation: response.data.precipitation,
@@ -48,7 +49,9 @@ export default function Weather(props) {
 
           <h2>{weatherData.city}</h2>
           <ul className="description-info">
-            <li>{weatherData.date}</li>
+            <li>
+              <FomattedDate date={weatherData.date} />
+            </li>
             <li className="description">{weatherData.description}</li>
           </ul>
           <div className="row">
