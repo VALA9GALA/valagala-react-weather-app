@@ -17,12 +17,7 @@ export default function Weather(props) {
       precipitation: response.data.precipitation,
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
-      iconUrl: (
-        <img
-          src={require("./sun-fun-rnbw-no-bkgrnd.png")}
-          alt={weatherData.description}
-        />
-      ),
+      iconUrl: response.data.weather[0].icon,
     });
   }
 

@@ -123,10 +123,7 @@ body {
     display: flex;
     justify-content: center;
   }
-  img {
-    width: 120px;
-    float: left;
-  }
+
   .main-temp {
     font-size: 60px;
     line-height: 2;
@@ -171,5 +168,12 @@ body {
   }
   h4 {
     text-align: center;
+  }
+}
+.WeatherIcon {
+  .weather-icon {
+    width: 80px;
+    height: 80px;
+    float: left;
   }
 }
