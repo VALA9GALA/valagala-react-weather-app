@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { Hourglass } from "react-loader-spinner";
 import WeatherInfo from "./WeatherInfo";
+import "./Weather.css";
 
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });

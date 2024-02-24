@@ -1,0 +1,152 @@
+.Weather {
+  .container {
+    position: relative;
+    padding-top: 20px;
+    background-color: #f6e8e5;
+    width: 400px;
+    border: 2px solid #848c8eff;
+    border-radius: 10px;
+    /*box-shadow: 10px 10px 10px rgba(67, 80, 88, 0.5);*/
+  }
+  form {
+    width: 70%;
+    padding: 15px;
+    box-sizing: border-box;
+    border: 4px dashed rgba(123, 104, 238, 0.8);
+    display: block;
+    margin: 0 auto;
+  }
+  input {
+    all: unset;
+    padding: 5px 8px;
+    border: 2px solid darkcyan;
+    position: absolute;
+    left: 25%;
+    top: 10%;
+    width: 200px;
+    box-sizing: border-box;
+
+    border-radius: 8px;
+  }
+  ::placeholder {
+    font-family: monospace;
+    font-size: 18px;
+    text-align: center;
+  }
+  input:focus {
+    all: unset;
+    position: absolute;
+    left: 25%;
+    top: 10%;
+    width: 200px;
+    box-sizing: border-box;
+    outline: none !important;
+    padding: 5px 8px;
+    border: 2px solid darkcyan;
+  }
+  .buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+  }
+  .btn-info {
+    background-color: mediumslateblue;
+    border: none;
+    color: #f6e8e5;
+  }
+  .btn-info:hover {
+    background-color: rgb(161, 148, 240);
+  }
+  .btn-warning {
+    border: none;
+
+    background-color: #dcf763ff;
+    color: #848c8eff;
+  }
+  .btn-warning:hover {
+    background-color: rgb(232, 251, 148);
+  }
+
+  h2 {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 33px;
+    color: #bfb7b6ff;
+    text-shadow: 2px 2px #435058ff;
+    letter-spacing: 5px;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    text-align: center;
+    list-style: none;
+    color: #848c8eff;
+    font-family: monospace;
+  }
+  .description-info {
+    padding: 2px;
+  }
+  .description {
+    text-transform: capitalize;
+    margin-bottom: -10px;
+  }
+  .main-temp-info {
+    display: flex;
+    justify-content: center;
+  }
+  canvas {
+    margin-left: -40px;
+    width: 100px;
+    height: 100px;
+    line-height: 2;
+  }
+  .main-temp {
+    font-size: 55px;
+    line-height: 2;
+    margin-left: 40px;
+    color: mediumslateblue;
+    opacity: 0.8;
+    text-shadow: 2px 2px #435058ff;
+    float: right;
+  }
+  .unit {
+    color: mediumslateblue;
+    opacity: 0.8;
+    text-shadow: 1px 1px #435058ff;
+    font-size: 24px;
+    line-height: 3;
+    margin-left: -5px;
+  }
+  .details {
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 16px;
+    margin-top: -10px;
+  }
+  .hum-wind {
+    color: darkcyan;
+  }
+  hr {
+    border: 4px dashed mediumslateblue;
+  }
+  h5 {
+    text-align: center;
+    color: rgb(187, 227, 11);
+    text-shadow: 2px 2px #435058ff;
+    /*color: #435058ff;*/
+    /*color: mediumslateblue;*/
+    opacity: 0.8;
+    margin-left: -20px;
+  }
+}
+.Hourglass {
+  .hourglass {
+    display: block;
+    margin: 80px auto;
+  }
+  h4 {
+    text-align: center;
+  }
+}
