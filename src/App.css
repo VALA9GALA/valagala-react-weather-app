@@ -114,18 +114,24 @@ body {
     font-family: monospace;
   }
   .description-info {
-    padding: 5px;
+    padding: 2px;
   }
   .description {
     text-transform: capitalize;
+    margin-bottom: -10px;
   }
   .main-temp-info {
     display: flex;
     justify-content: center;
   }
-
+  canvas {
+    margin-left: -40px;
+    width: 100px;
+    height: 100px;
+    line-height: 2;
+  }
   .main-temp {
-    font-size: 60px;
+    font-size: 55px;
     line-height: 2;
     margin-left: 40px;
     color: mediumslateblue;
@@ -147,7 +153,9 @@ body {
     font-size: 16px;
     margin-top: -10px;
   }
-
+  .hum-wind {
+    color: darkcyan;
+  }
   hr {
     border: 4px dashed mediumslateblue;
   }
@@ -168,12 +176,5 @@ body {
   }
   h4 {
     text-align: center;
-  }
-}
-.WeatherIcon {
-  .weather-icon {
-    width: 80px;
-    height: 80px;
-    float: left;
   }
 }

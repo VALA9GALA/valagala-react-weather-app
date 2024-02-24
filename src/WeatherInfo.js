@@ -22,20 +22,10 @@ export default function WeatherInfo(props) {
       </div>
       <ul className="details">
         <li>
-          <span className="emoji" role="img" aria-label="Rain-cloud emoji">
-            🌧️
-          </span>
-          {props.data.precipitation}mm
+          <span className="hum-wind">Humidity: {props.data.humidity}%</span>
         </li>
         <li>
-          <span className="emoji" role="img" aria-label="Water-drops emoji">
-            💦{props.data.humidity}%
-          </span>
-        </li>
-        <li>
-          <span className="emoji" role="img" aria-label="Wind-blow emoji">
-            🌬️{props.data.wind} m/h
-          </span>
+          <span className="hum-wind">Wind: {props.data.wind} m/h</span>
         </li>
       </ul>
       <h5>
