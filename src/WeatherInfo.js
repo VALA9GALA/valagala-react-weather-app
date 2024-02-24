@@ -1,6 +1,7 @@
 import React from "react";
 import FomattedDate from "./FormattedDate";
 import WeatherIcon from "./WeatherIcon";
+import Phrase from "./Phrase";
 import "./Weather.css";
 
 export default function WeatherInfo(props) {
@@ -11,7 +12,7 @@ export default function WeatherInfo(props) {
         <li>
           <FomattedDate date={props.data.date} />
         </li>
-        <li className="description">{props.data.description}</li>
+       
       </ul>
       <div className="row">
         <div className="col main-temp-info">
@@ -29,9 +30,7 @@ export default function WeatherInfo(props) {
           <span className="hum-wind">Wind: {props.data.wind} m/h</span>
         </li>
       </ul>
-      <h5>
-        <em>It's always sunny in...</em>
-      </h5>
+      <Phrase description={props.data.description} />
       <hr />
     </div>
   );
