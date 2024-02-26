@@ -99,6 +99,7 @@
 .Weather .description-info {
   font-size: 22px;
   text-shadow: 1px 1px #435058ff;
+  margin-top: -15px;
 }
 
 .Weather .main-temp-info {
@@ -115,7 +116,6 @@
 .WeatherTemperature .main-temp {
   font-size: 55px;
   line-height: 2;
-
   color: mediumslateblue;
   opacity: 0.8;
   text-shadow: 2px 2px #435058ff;
@@ -142,6 +142,7 @@
 }
 .Weather hr {
   border: 4px dashed mediumslateblue;
+  margin-top: 0;
 }
 .Weather h5 {
   font-size: 22px;
