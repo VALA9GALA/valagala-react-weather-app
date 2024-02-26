@@ -75,7 +75,6 @@ export default function Weather(props) {
           wrapperClass="hourglass"
           colors={["#306cce", "#72a1ed"]}
         />
-        <h4>Loading...</h4>
       </div>
     );
   }
