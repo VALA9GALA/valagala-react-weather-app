@@ -1,5 +1,5 @@
 body {
-  margin-top: 20px;
+  margin-top: 10px;
   background-color: pink;
   background-image: url("./camo-cloud-resize-640.jpg");
   background-position: fixed;
@@ -10,6 +10,8 @@ body {
 .App h1 {
   text-align: center;
   margin-bottom: 10px;
+  font-family: Josefin Sans;
+  font-weight: 700;
   color: thistle;
   text-shadow: 2px 2px #435058ff;
   letter-spacing: 22px;
@@ -24,5 +26,3 @@ body {
 .App a {
   color: rgb(179, 6, 179);
 }
-
-

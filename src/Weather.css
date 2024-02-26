@@ -1,7 +1,7 @@
 .Weather .container {
   position: relative;
   padding-top: 20px;
-
+  margin-top: -10px;
   background-image: linear-gradient(
     90deg,
     transparent 50%,
@@ -76,6 +76,8 @@
 }
 
 .Weather h2 {
+  font-family: Josefin Sans;
+  font-weight: 700;
   margin-top: 10px;
   text-align: center;
   font-size: 33px;
@@ -104,44 +106,47 @@
   justify-content: center;
 }
 .Weather canvas {
-  margin-left: -20px;
   width: 110px;
   height: 110px;
   line-height: 2;
+  margin-right: -40px;
+  margin-top: 10px;
 }
-.Weather .main-temp {
-  font-size: 46px;
-  line-height: 2.5;
-  margin-left: 40px;
+.WeatherTemperature .main-temp {
+  font-size: 55px;
+  line-height: 2;
+
   color: mediumslateblue;
   opacity: 0.8;
   text-shadow: 2px 2px #435058ff;
-  float: right;
 }
-.Weather .unit {
+.WeatherTemperature .unit {
   color: mediumslateblue;
   opacity: 0.8;
   text-shadow: 1px 1px #435058ff;
   font-size: 24px;
-  line-height: 3.5;
-  margin-left: -5px;
+  margin-top: -30px;
+  display: inline-block;
+  vertical-align: text-top;
+}
+.WeatherTemperature .unit a {
+  text-decoration: none;
 }
 .Weather .details {
   display: flex;
   justify-content: space-evenly;
   font-size: 16px;
-  margin-top: -10px;
 }
 .Weather .hum-wind {
-  margin-top: 5px;
   color: darkcyan;
 }
 .Weather hr {
   border: 4px dashed mediumslateblue;
 }
 .Weather h5 {
+  font-size: 22px;
   text-align: center;
-  color: rgb(187, 227, 11);
+  color: mediumslateblue;
   text-shadow: 2px 2px #435058ff;
   letter-spacing: 6px;
   /*color: #435058ff;*/
