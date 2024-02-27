@@ -14,7 +14,8 @@
   width: 340px;
   border: 2px solid #848c8eff;
   border-radius: 10px;
-  box-shadow: 4px 10px 8px rgba(148, 86, 125, 0.5);
+  box-shadow: 4px 10px 8px rgba(123, 104, 238, 0.4);
+  /*4px 10px 8px rgba(148, 86, 125, 0.5)*/;
 }
 
 .Weather form {

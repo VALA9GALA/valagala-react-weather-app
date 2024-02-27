@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Hourglass } from "react-loader-spinner";
 import WeatherInfo from "./WeatherInfo";
@@ -7,6 +7,7 @@ import "./Weather.css";
 export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
+
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
@@ -37,6 +38,27 @@ export default function Weather(props) {
     setCity(event.target.value);
   }
 
+  function getPosition() {
+    navigator.geolocation.getCurrentPosition(getPositionWeather);
+  }
+
+  function getPositionWeather(position) {
+    console.log(position);
+    let lat = position.coords.latitude;
+    let lon = position.coords.longitude;
+
+    let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?";
+    let apiKey = "bd5b4461863eddaa6ced0a0a67989e0a";
+
+    let apiUrl = `${apiEndpoint}lon=${lon}&lat=${lat}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  useEffect(() => {
+    search();
+    // eslint-disable-next-line
+  }, []); // This will run the search function only once when the component mounts
+
   if (weatherData.ready) {
     return (
       <div className="Weather">
@@ -55,7 +77,12 @@ export default function Weather(props) {
             </div>
             <div className="buttons">
               <button className="btn btn-info me-3 shadow-sm">Search</button>
-              <button className="btn btn-warning shadow-sm">Current</button>
+              <button
+                className="btn btn-warning shadow-sm"
+                onClick={getPosition}
+              >
+                Current
+              </button>
             </div>
           </form>
           <WeatherInfo data={weatherData} />
@@ -63,9 +90,9 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    search();
     return (
       <div className="Hourglass">
+        <br></br>
         <Hourglass
           visible={true}
           height="140"
@@ -73,7 +100,7 @@ export default function Weather(props) {
           ariaLabel="hourglass-loading"
           wrapperStyle={{}}
           wrapperClass="hourglass"
-          colors={["#306cce", "#72a1ed"]}
+          colors={["rgba(123, 104, 238, 0.9)", "#f4a8b5"]}
         />
       </div>
     );

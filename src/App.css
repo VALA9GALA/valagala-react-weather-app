@@ -1,7 +1,16 @@
 body {
   margin-top: 10px;
-  background-color: pink;
-  background-image: url("./camo-cloud-resize-640.jpg");
+  /*background-color: pink;
+  background-image: url("./camo-cloud-resize-640.jpg");*/
+  background-image: linear-gradient(
+    90deg,
+    transparent 50%,
+    rgba(123, 104, 238, 0.4) /*rgba(120, 165, 231, 0.5)*/ 50%
+  );
+  background-size: 320px;
+
+  background-color: #f6e8e5;
+
   background-position: fixed;
 
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
