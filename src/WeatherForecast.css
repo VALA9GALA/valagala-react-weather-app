@@ -25,6 +25,6 @@
 
 @media (max-width: 800px) {
   .WeatherForecast .ForecastTemps {
-    font-size: 10px;
+    font-size: 11px;
   }
 }
