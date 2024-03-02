@@ -22,3 +22,9 @@
 .WeatherForecast .ForecastTempsMin {
   opacity: 0.6;
 }
+
+@media (max-width: 800px) {
+  .WeatherForecast .ForecastTemps {
+    font-size: 10px;
+  }
+}
