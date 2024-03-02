@@ -173,6 +173,6 @@
 
 @media (max-width: 800px) {
   .WeatherTemperature .unit {
-    font-size: 16px;
+    font-size: 20px;
   }
 }
