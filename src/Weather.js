@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Hourglass } from "react-loader-spinner";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import "./Weather.css";
 
 export default function Weather(props) {
@@ -12,6 +13,7 @@ export default function Weather(props) {
     console.log(response.data);
     setWeatherData({
       ready: true,
+      coord: response.data.coord,
       city: response.data.name,
       date: new Date(response.data.dt * 1000),
       temp: response.data.main.temp,
@@ -86,6 +88,7 @@ export default function Weather(props) {
             </div>
           </form>
           <WeatherInfo data={weatherData} />
+          <WeatherForecast coord={weatherData.coord} />
         </div>
       </div>
     );

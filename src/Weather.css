@@ -15,7 +15,7 @@
   border: 2px solid #848c8eff;
   border-radius: 10px;
   box-shadow: 4px 10px 8px rgba(123, 104, 238, 0.4);
-  /*4px 10px 8px rgba(148, 86, 125, 0.5)*/;
+  /*4px 10px 8px rgba(148, 86, 125, 0.5)*/
 }
 
 .Weather form {
@@ -35,12 +35,13 @@
   top: 10%;
   width: 55%;
   box-sizing: border-box;
-
+  color: #435058ff;
+  font-family: monospace;
   border-radius: 8px;
 }
 .Weather ::placeholder {
   font-family: monospace;
-  font-size: 18px;
+
   text-align: center;
 }
 .Weather input:focus {
@@ -53,6 +54,8 @@
   outline: none !important;
   padding: 5px 8px;
   border: 2px solid darkcyan;
+  color: #435058ff;
+  font-family: monospace;
 }
 .Weather .buttons {
   display: flex;
@@ -106,6 +109,7 @@
 .Weather .main-temp-info {
   display: flex;
   justify-content: center;
+  margin-top: -5px;
 }
 .Weather canvas {
   width: 110px;
@@ -114,6 +118,7 @@
   margin-right: -40px;
   margin-top: 10px;
 }
+
 .WeatherTemperature .main-temp {
   font-size: 55px;
   line-height: 2;
@@ -143,7 +148,7 @@
 }
 .Weather hr {
   border: 4px dashed mediumslateblue;
-  margin-top: 0;
+  margin-top: -3px;
 }
 .Weather h5 {
   font-size: 22px;
@@ -155,6 +160,7 @@
   /*color: mediumslateblue;*/
   opacity: 0.8;
   margin-left: -20px;
+  margin-top: -6px;
 }
 
 .Hourglass .hourglass {

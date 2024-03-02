@@ -1,0 +1,24 @@
+.WeatherForecast {
+  font-size: 16px;
+  font-family: monospace;
+  color: #435058ff;
+  display: flex;
+  justify-content: space-evenly;
+}
+.WeatherForecast .ForecastDay {
+  margin-top: -15px;
+  text-align: center;
+}
+.WeatherForecast canvas {
+  width: 40px;
+  height: 40px;
+  margin-top: 0px;
+}
+.WeatherForecast .ForecastTemps {
+  margin-top: -5px;
+  font-size: 12px;
+  color: darkcyan;
+}
+.WeatherForecast .ForecastTempsMin {
+  opacity: 0.6;
+}
