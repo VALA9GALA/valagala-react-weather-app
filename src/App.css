@@ -19,6 +19,17 @@ body {
 .App {
   margin-top: 60px;
 }
+h1 {
+  font-family: Josefin Sans;
+  font-weight: 700;
+  letter-spacing: 10px;
+  color: #f4a8b5;
+  text-shadow: 2px 1px #435058ff;
+  font-size: 50px;
+}
+.App .title {
+  color: rgb(187, 227, 11);
+}
 .App footer {
   margin-top: 0px;
   text-align: center;
@@ -28,4 +39,23 @@ body {
 }
 .App a {
   color: rgb(179, 6, 179);
+}
+@media (max-width: 500px) {
+  .App body {
+    overflow-x: hidden;
+    background-attachment: fixed;
+  }
+  .App .col-md {
+    margin: 0 auto;
+  }
+  .App .row{
+    margin: 0 auto;
+  }
+  .App h1 {
+    font-size: 40px;
+    margin: 10px auto !important;
+  }
+  footer {
+    display: inline;
+  }
 }
