@@ -51,6 +51,7 @@ h1 {
   }
   .App .row {
     margin: 0 auto !important;
+    padding-left: 20px !important;
   }
   .App h1 {
     font-size: 40px;
