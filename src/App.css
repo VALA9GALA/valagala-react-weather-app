@@ -46,16 +46,17 @@ h1 {
     background-attachment: fixed;
   }
   .App .col-md {
-    margin: 0 auto;
+    margin: 0 auto !important;
+    padding: 0px !important;
   }
-  .App .row{
-    margin: 0 auto;
+  .App .row {
+    margin: 0 auto !important;
   }
   .App h1 {
     font-size: 40px;
     margin: 10px auto !important;
   }
   footer {
-    display: inline;
+    text-align: start !important;
   }
 }

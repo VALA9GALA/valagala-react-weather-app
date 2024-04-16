@@ -19,25 +19,26 @@ export default function App() {
           </div>
           <div className="col-md me-5 pe-5">
             <Weather defaultCity="New York" />
+
+            <footer>
+              Coded by{" "}
+              <a
+                href="https://valagala.netlify.app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                VALAGALA
+              </a>{" "}
+              See{" "}
+              <a
+                href="https://github.com/VALA9GALA/valagala-react-weather-app"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                HERE
+              </a>
+            </footer>
           </div>
-          <footer>
-            Coded by{" "}
-            <a
-              href="https://valagala.netlify.app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              VALAGALA
-            </a>{" "}
-            See{" "}
-            <a
-              href="https://github.com/VALA9GALA/valagala-react-weather-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              HERE
-            </a>
-          </footer>
         </div>
       </div>
     </div>
