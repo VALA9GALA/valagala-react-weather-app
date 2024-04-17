@@ -2,12 +2,6 @@
   position: relative;
   padding-top: 20px;
   margin-top: -10px;
-  background-image: linear-gradient(
-    90deg,
-    transparent 50%,
-    rgba(123, 104, 238, 0.4) /*rgba(120, 165, 231, 0.5)*/ 50%
-  );
-  background-size: 135px;
 
   background-color: #f6e8e5;
 
