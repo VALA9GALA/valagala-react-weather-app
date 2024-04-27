@@ -50,7 +50,10 @@ export default function Weather(props) {
     let lon = position.coords.longitude;
 
     let apiEndpoint = "https://api.openweathermap.org/data/2.5/weather?";
-    let apiKey = "bd5b4461863eddaa6ced0a0a67989e0a";
+    /*let apiKey = "2422156241635a837d6a6ff48a8ca511";*/
+    /*this is the newest one-- maybe not active yet?vv*/
+    let apiKey = "f0efa0c4ee97ade1319bdb7e57ff8b3a";
+    /*let apiKey = "bd5b4461863eddaa6ced0a0a67989e0a";*/
 
     let apiUrl = `${apiEndpoint}lon=${lon}&lat=${lat}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
