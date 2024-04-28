@@ -6,8 +6,8 @@
   background-color: #f6e8e5;
 
   width: 340px;
-  border: 2px solid #848c8eff;
-  border-radius: 10px;
+  border: 10px solid #848c8eff;
+  border-radius: 18px;
   box-shadow: 4px 10px 8px rgba(123, 104, 238, 0.4);
   /*4px 10px 8px rgba(148, 86, 125, 0.5)*/
 }
@@ -140,10 +140,10 @@
 .Weather .hum-wind {
   color: darkcyan;
 }
-.Weather hr {
+/*.Weather hr {
   border: 4px dashed mediumslateblue;
   margin-top: -3px;
-}
+}*/
 .Weather h5 {
   font-size: 22px;
   text-align: center;
@@ -154,7 +154,8 @@
   /*color: mediumslateblue;*/
   opacity: 0.8;
   margin-left: -20px;
-  margin-top: -6px;
+  /*margin-top: -6px;*/
+  margin-bottom: 15px;
 }
 
 .Hourglass .hourglass {

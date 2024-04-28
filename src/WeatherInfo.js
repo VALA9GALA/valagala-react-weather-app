@@ -31,7 +31,8 @@ export default function WeatherInfo(props) {
         </li>
       </ul>
       <Phrase description={props.data.description} />
-      <hr />
+      {/*<hr />*/}
+     
     </div>
   );
 }

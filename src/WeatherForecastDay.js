@@ -1,3 +1,5 @@
+//Issues with the API--forecast does not display-- try to fix it later again
+
 import React from "react";
 import WeatherIcon from "./WeatherIcon";
 import "./WeatherForecast.css";
@@ -26,7 +28,6 @@ export default function WeatherForecastDay(props) {
       <div className="ForecastDay">{day()}</div>
       <WeatherIcon
         code={props.data.weather[0].icon}
-        
         className="forecast-icon"
       />
       <div className="ForecastTemps">
